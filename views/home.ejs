@@ -7,9 +7,9 @@
   <link rel="stylesheet" type="text/css" href="/index.css">
 </head>
 <body>
-<h1><i class="fas fa-virus"></i><b> Live Covid-19 report INDIA</b></h1>
+<h1><i class="fas fa-virus"></i><b>  Live Covid-19 report INDIA</b></h1>
 	<h2>
-		<i class="fas fa-chart-line"></i> Total cases : <%=total;%>
+		<i class="fas fa-chart-line"></i>  Total cases : <%= total; %>
 	</h2>
 <svg xmlns:mapsvg="http://mapsvg.com" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" id="svg2" height="695.70178" width="611.85999" mapsvg:geoViewBox="68.184010 37.084109 97.418146 6.753659">
 
@@ -81,14 +81,14 @@
     <th>Recovered</th>
     <th>Deaths</th>
   </tr>
-  <% for(var i=0;i<38;i++){ %>
+  <% for(var i=1;i<38;i++){ %>
 	
   <tr>
-    <td data-th="State"><%=data[i].state;%></td>
-    <td data-th="Active"><%=data[i].active;%></td>
-    <td data-th="Confirmed"><%=data[i].confirmed;%></td>
-    <td data-th="Recovered"><%=data[i].recovered;%></td>
-    <td data-th="Deaths"><%=data[i].deaths;%></td>
+    <td data-th="State"><%=raw[i].state;%></td>
+    <td data-th="Active"><%=raw[i].active;%></td>
+    <td data-th="Confirmed"><%=raw[i].confirmed;%></td>
+    <td data-th="Recovered"><%=raw[i].recovered;%></td>
+    <td data-th="Deaths"><%=raw[i].deaths;%></td>
   </tr>
 	<% } %>
   
@@ -100,7 +100,6 @@
 	
 	
 <script type="text/javascript">
-	alert("hi");
 
 var AndhraPradesh = document.getElementById("Andhra Pradesh");
 AndhraPradesh.addEventListener("click",function(){
