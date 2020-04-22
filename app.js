@@ -29,7 +29,8 @@ function sortOn(arr,prop){
 var states;
 var last;
 var total;
-var raw;
+var raw_world_data;
+var raw_world_tab_data;
 
 request("https://api.covid19india.org/data.json",function(err,res,body){
 	if(!err && res.statusCode == 200)
@@ -66,8 +67,28 @@ request("https://api.covid19india.org/data.json",function(err,res,body){
 	}
 });
 
+
+request("https://corona-api.com/countries",function(err,res,body){
+	if(!err && res.statusCode == 200)
+		{
+		 raw_world_data = JSON.parse(body);
+		raw_world_tab_data = raw_world_data.data;
+		console.log("successfully fetched raw_world_data")
+		
+		}
+	else
+	{
+		console.log(err);
+	}
+});
+
+
 app.get("/",function(req,res){
 	res.render("home.ejs",{data:states,raw:raw,total:total});
+});
+
+app.get("/world",function(req,res){
+	res.render("world.ejs",{data:raw_world_data,tab_data:raw_world_tab_data});
 });
 
 app.listen(process.env.PORT||3000,process.env.IP,function(){
