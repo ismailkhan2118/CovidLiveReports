@@ -3,15 +3,15 @@ var app = express();
 var request = require("request");
 app.use(express.static("decor"));
 
-var d = new Date();
-var dd = d.getDate()-2;
-var mm = d.getMonth()+1;
-var yy = d.getFullYear();
-var utc = dd+"/0"+mm+"/"+yy+" 21:00:00"; //after month 9, change this line!!
+//var d = new Date();
+//var dd = d.getDate()-2;
+//var mm = d.getMonth()+1;
+//var yy = d.getFullYear();
+//var utc = dd+"/0"+mm+"/"+yy+" 21:00:00"; //after month 9, change this line!!
 
-function isLast(fruit) { 
-  return fruit.updatetimestamp === utc;
-};
+ //function isLast(fruit) { 
+ // return fruit.updatetimestamp === utc;
+// };
 
 function sortOn(arr,prop){
     arr.sort(
@@ -37,8 +37,8 @@ request("https://api.covid19india.org/data.json",function(err,res,body){
 		{
 		var raw_data = JSON.parse(body);
 	    raw = raw_data.statewise;
-		last = raw_data.tested;
-		total = last.find(isLast).totalpositivecases;
+		//last = raw_data.tested;
+		//total = last.find(isLast).totalpositivecases;
 		console.log("successfully fetched raw_data")
 		
 		}
@@ -54,7 +54,7 @@ request("https://api.covid19india.org/data.json",function(err,res,body){
 		var data = JSON.parse(body);
 		//last = data.tested;
 	//	total = last.find(isLast);
-	    states = data.statewise;			
+	    states = data.statewise;
 		//var total = data.tested.find(function(details){
 			//	return details.updatetimestamp === utc;
 		//});

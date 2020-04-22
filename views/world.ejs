@@ -3,6 +3,7 @@
 <head>
   <script src="https://kit.fontawesome.com/ef963380d6.js" crossorigin="anonymous"></script>
 	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="/world.css">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
 </head>
@@ -1557,6 +1558,8 @@
 	 d="m 879.6,395.2 -0.2,-0.2 -0.7,0.5 -0.6,0 0.1,0.2 0.1,0.2 0.7,0.4 0.6,-1.1 z m 13.5,-2.1 0,-0.1 -0.1,0 -0.1,0.1 -1.3,-0.1 -0.2,0.6 -0.5,0.4 0,0.7 0.5,0.7 0.3,0.1 0.5,0.1 0.7,-0.4 0.2,-0.4 0.1,-0.8 -0.1,-0.4 0,-0.5 z m -9.7,0.8 0.5,-0.4 0,-0.2 -0.1,-0.3 -0.5,-0.3 -0.2,0 -0.2,0.2 -0.2,0.4 0.3,0.5 0.2,0.1 0.2,0 z m 4.7,-2.3 1.2,-1 0,-0.3 -1,0.1 -1.1,1 -0.3,0.1 -1,0.1 -0.5,0 -0.4,0.2 0.2,0.3 0.4,1 0.7,0.9 0.6,-0.2 0.3,-0.2 0.4,-0.6 0.5,-1.4 z m 11.6,1.3 1.5,-0.5 0.3,-1 0.3,-1.1 0,-0.7 -0.2,-0.3 -0.1,0 -0.4,0 -0.3,0.2 -0.1,0.6 -0.7,1.3 -0.5,1.2 -0.7,0.6 -0.7,0.2 0.1,0.1 0.7,0.1 0.8,-0.7 z m -19.7,-2 0.5,-0.5 0.1,-0.3 -0.1,-0.5 0.2,-0.2 -0.1,-0.4 -0.3,-0.4 -0.7,0 -0.4,0.6 0.6,1.2 0.1,0.5 0.1,0 z m 22.4,-2.7 0.9,-0.3 0.5,-0.3 0.1,-0.9 0.2,-0.3 -0.2,-0.3 -0.2,0.2 -0.2,0.4 -0.6,0.2 -0.8,0.4 -0.2,0.3 -0.2,0.9 0.4,0.1 0.3,-0.4 z"
 	 style="fill:#f2f2f2;fill-rule:evenodd" />
 </svg>
+<br>
+<h2><a type="button" class="btn btn-secondary" href="/">INDIA REPORT <i class="far fa-flag"></i></a></h2>
 
 <h2>Click on the Countries on the MAP for details.</h2>
 <h4>Note:Please zoom-in if using mobiles for better experience!</h4>
@@ -1581,6 +1584,10 @@
   
 </table>
 <input style="visibility: hidden" id="EJSData" value="<%= JSON.stringify(data) %>"/>
+				
+	<h4>
+	<i class="fas fa-address-card ik"></i><b>-Ismail khan</b><br><i class="fas fa-envelope ik"></i><b>-ismailkhan2118@gmail.com</b><br><i class="fas fa-graduation-cap ik"></i><b>-MJCET</b>
+	</h4>
 
 <script type="text/javascript">
 
@@ -1602,13 +1609,14 @@ for(var i=0;i<211;i++)
 	countries[i].addEventListener("click",function(){
 		s = this.getAttribute("id");
 		var c =  actual_array.find(getCountry);
-		alert("Country: "+c.name+"\n"+"Confirmed: "+c.latest_data.confirmed+"\n"+"Deaths: "+c.latest_data.deaths+"\n"+"Recovered: "+c.latest_data.recovered+"\nLast updated: "+c.updated_at);
-				
-				
-				
+		alert("Country: "+c.name+"\n"+"Confirmed: "+c.latest_data.confirmed+"\n"+"Deaths:  "+c.latest_data.deaths+"\n"+"Recovered: "+c.latest_data.recovered+"\nLast updated: "+c.updated_at);
+
 	});
-				
 }
 </script>
+				
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
