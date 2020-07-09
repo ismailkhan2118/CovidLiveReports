@@ -93,188 +93,36 @@
 	<% } %>
   
 </table>
+	<input style="visibility: hidden" id="EJSData" value="<%= JSON.stringify(raw) %>"/>
 
 <h4>
 	<i class="fas fa-address-card ik"></i><b>-Ismail khan</b><br><i class="fas fa-envelope ik"></i><b>-ismailkhan2118@gmail.com</b><br><i class="fas fa-graduation-cap ik"></i><b>-MJCET</b>
 	</h4>
+
 	
 	
 	
 	
 <script type="text/javascript">
 
-var AndhraPradesh = document.getElementById("Andhra Pradesh");
-AndhraPradesh.addEventListener("click",function(){
-	alert("State: <%=data[1].state;%>\nActive: <%=data[1].active;%>\nConfirmed: <%=data[1].confirmed;%>\nDeaths: <%=data[1].deaths;%>\nRecovered: <%=data[1].recovered;%>\nLast Updated: <%=data[1].lastupdatedtime%>");
-});
-var ArunachalPradesh = document.getElementById("Arunachal Pradesh");
-ArunachalPradesh.addEventListener("click",function(){
-	alert("State: <%=data[2].state;%>\nActive: <%=data[2].active;%>\nConfirmed: <%=data[2].confirmed;%>\nDeaths: <%=data[2].deaths;%>\nRecovered: <%=data[2].recovered;%>\nLast Updated: <%=data[2].lastupdatedtime%>");
-});
-var Assam = document.getElementById("Assam");
-Assam.addEventListener("click",function(){
-	alert("State: <%=data[3].state;%>\nActive: <%=data[3].active;%>\nConfirmed: <%=data[3].confirmed;%>\nDeaths: <%=data[3].deaths;%>\nRecovered: <%=data[3].recovered;%>\nLast Updated: <%=data[3].lastupdatedtime%>");
-});
+var ejs_d = document.getElementById("EJSData");
+var d = ejs_d.getAttribute("value");
+var array = JSON.parse(d);
+var s; 
+function getState(evt){
+	return evt.state === s;
+};
 
+var states = document.getElementsByTagName("path");
+for(var i=0;i<36;i++)
+{
+	states[i].addEventListener("click",function(){
+		s = this.getAttribute("id");
+		var c =  array.find(getState);
+		alert("State: "+c.state+"\n"+"Confirmed: "+c.confirmed+"\n"+"Deaths:  "+c.deaths+"\n"+"Recovered: "+c.recovered+"\nLast updated: "+c.lastupdatedtime);
 
-var Bihar = document.getElementById("Bihar");
-Bihar.addEventListener("click",function(){
-	alert("State: <%=data[4].state;%>\nActive: <%=data[4].active;%>\nConfirmed: <%=data[4].confirmed;%>\nDeaths: <%=data[4].deaths;%>\nRecovered: <%=data[4].recovered;%>\nLast Updated: <%=data[4].lastupdatedtime%>");
-});
-
-
-
-var Chandigarh = document.getElementById("Chandigarh");
-Chandigarh.addEventListener("click",function(){
-	alert("State: <%=data[5].state;%>\nActive: <%=data[5].active;%>\nConfirmed: <%=data[5].confirmed;%>\nDeaths: <%=data[5].deaths;%>\nRecovered: <%=data[5].recovered;%>\nLast Updated: <%=data[5].lastupdatedtime%>");
-});
-
-var Chhattisgarh = document.getElementById("Chhattisgarh");
-Chhattisgarh.addEventListener("click",function(){
-	alert("State: <%=data[6].state;%>\nActive: <%=data[6].active;%>\nConfirmed: <%=data[6].confirmed;%>\nDeaths: <%=data[6].deaths;%>\nRecovered: <%=data[6].recovered;%>\nLast Updated: <%=data[6].lastupdatedtime%>");
-});
-
-var DamanandDiu = document.getElementById("Daman and Diu");
-DamanandDiu.addEventListener("click",function(){
-	alert("State: <%=data[8].state;%>\nActive: <%=data[8].active;%>\nConfirmed: <%=data[8].confirmed;%>\nDeaths: <%=data[8].deaths;%>\nRecovered: <%=data[8].recovered;%>\nLast Updated: <%=data[8].lastupdatedtime%>");
-});
-
-var Delhi = document.getElementById("Delhi");
-Delhi.addEventListener("click",function(){
-	alert("State: <%=data[9].state;%>\nActive: <%=data[9].active;%>\nConfirmed: <%=data[9].confirmed;%>\nDeaths: <%=data[9].deaths;%>\nRecovered: <%=data[9].recovered;%>\nLast Updated: <%=data[9].lastupdatedtime%>");
-});
-
-var DadraandNagarHaveli = document.getElementById("Dadra and Nagar Haveli");
-DadraandNagarHaveli.addEventListener("click",function(){
-	alert("State: <%=data[7].state;%>\nActive: <%=data[7].active;%>\nConfirmed: <%=data[7].confirmed;%>\nDeaths: <%=data[7].deaths;%>\nRecovered: <%=data[7].recovered;%>\nLast Updated: <%=data[7].lastupdatedtime%>");
-});
-
-var Goa = document.getElementById("Goa");
-Goa.addEventListener("click",function(){
-	alert("State: <%=data[10].state;%>\nActive: <%=data[10].active;%>\nConfirmed: <%=data[10].confirmed;%>\nDeaths: <%=data[10].deaths;%>\nRecovered: <%=data[10].recovered;%>\nLast Updated: <%=data[10].lastupdatedtime%>");
-});
-
-var Gujarat = document.getElementById("Gujarat");
-Gujarat.addEventListener("click",function(){
-	alert("State: <%=data[11].state;%>\nActive: <%=data[11].active;%>\nConfirmed: <%=data[11].confirmed;%>\nDeaths: <%=data[11].deaths;%>\nRecovered: <%=data[11].recovered;%>\nLast Updated: <%=data[11].lastupdatedtime%>");
-});
-
-var HimachalPradesh = document.getElementById("Himachal Pradesh");
-HimachalPradesh.addEventListener("click",function(){
-	alert("State: <%=data[13].state;%>\nActive: <%=data[13].active;%>\nConfirmed: <%=data[13].confirmed;%>\nDeaths: <%=data[13].deaths;%>\nRecovered: <%=data[13].recovered;%>\nLast Updated: <%=data[13].lastupdatedtime%>");
-});
-
-var Haryana = document.getElementById("Haryana");
-Haryana.addEventListener("click",function(){
-	alert("State: <%=data[12].state;%>\nActive: <%=data[12].active;%>\nConfirmed: <%=data[12].confirmed;%>\nDeaths: <%=data[12].deaths;%>\nRecovered: <%=data[12].recovered;%>\nLast Updated: <%=data[12].lastupdatedtime%>");
-});
-
-var Jharkhand = document.getElementById("Jharkhand");
-Jharkhand.addEventListener("click",function(){
-	alert("State: <%=data[15].state;%>\nActive: <%=data[15].active;%>\nConfirmed: <%=data[15].confirmed;%>\nDeaths: <%=data[15].deaths;%>\nRecovered: <%=data[15].recovered;%>\nLast Updated: <%=data[15].lastupdatedtime%>");
-});
-
-var JammuandKashmir = document.getElementById("Jammu and Kashmir");
-JammuandKashmir.addEventListener("click",function(){
-	alert("State: <%=data[14].state;%>\nActive: <%=data[14].active;%>\nConfirmed: <%=data[14].confirmed;%>\nDeaths: <%=data[14].deaths;%>\nRecovered: <%=data[14].recovered;%>\nLast Updated: <%=data[14].lastupdatedtime%>");
-});
-
-var Karnataka = document.getElementById("Karnataka");
-Karnataka.addEventListener("click",function(){
-	alert("State: <%=data[16].state;%>\nActive: <%=data[16].active;%>\nConfirmed: <%=data[16].confirmed;%>\nDeaths: <%=data[16].deaths;%>\nRecovered: <%=data[16].recovered;%>\nLast Updated: <%=data[16].lastupdatedtime%>");
-});
-
-var Kerala = document.getElementById("Kerala");
-Kerala.addEventListener("click",function(){
-	alert("State: <%=data[17].state;%>\nActive: <%=data[17].active;%>\nConfirmed: <%=data[17].confirmed;%>\nDeaths: <%=data[17].deaths;%>\nRecovered: <%=data[17].recovered;%>\nLast Updated: <%=data[17].lastupdatedtime%>");
-});
-
-var Lakshadweep = document.getElementById("Lakshadweep");
-Lakshadweep.addEventListener("click",function(){
-	alert("State: <%=data[19].state;%>\nActive: <%=data[19].active;%>\nConfirmed: <%=data[19].confirmed;%>\nDeaths: <%=data[19].deaths;%>\nRecovered: <%=data[19].recovered;%>\nLast Updated: <%=data[19].lastupdatedtime%>");
-});
-
-var Maharashtra = document.getElementById("Maharashtra");
-Maharashtra.addEventListener("click",function(){
-	alert("State: <%=data[21].state;%>\nActive: <%=data[21].active;%>\nConfirmed: <%=data[21].confirmed;%>\nDeaths: <%=data[21].deaths;%>\nRecovered: <%=data[21].recovered;%>\nLast Updated: <%=data[21].lastupdatedtime%>");
-});
-
-var Meghalaya = document.getElementById("Meghalaya");
-Meghalaya.addEventListener("click",function(){
-	alert("State: <%=data[23].state;%>\nActive: <%=data[23].active;%>\nConfirmed: <%=data[23].confirmed;%>\nDeaths: <%=data[23].deaths;%>\nRecovered: <%=data[23].recovered;%>\nLast Updated: <%=data[23].lastupdatedtime%>");
-});
-
-var Manipur = document.getElementById("Manipur");
-Manipur.addEventListener("click",function(){
-	alert("State: <%=data[22].state;%>\nActive: <%=data[22].active;%>\nConfirmed: <%=data[22].confirmed;%>\nDeaths: <%=data[22].deaths;%>\nRecovered: <%=data[22].recovered;%>\nLast Updated: <%=data[22].lastupdatedtime%>");
-});
-
-var MadhyaPradesh = document.getElementById("Madhya Pradesh");
-MadhyaPradesh.addEventListener("click",function(){
-alert("State: <%=data[20].state;%>\nActive: <%=data[20].active;%>\nConfirmed: <%=data[20].confirmed;%>\nDeaths: <%=data[20].deaths;%>\nRecovered: <%=data[20].recovered;%>\nLast Updated: <%=data[20].lastupdatedtime%>");
-});
-
-var Mizoram = document.getElementById("Mizoram");
-Mizoram.addEventListener("click",function(){
-	alert("State: <%=data[24].state;%>\nActive: <%=data[24].active;%>\nConfirmed: <%=data[24].confirmed;%>\nDeaths: <%=data[24].deaths;%>\nRecovered: <%=data[24].recovered;%>\nLast Updated: <%=data[24].lastupdatedtime%>");
-});
-
-var Nagaland = document.getElementById("Nagaland");
-Nagaland.addEventListener("click",function(){
-	alert("State: <%=data[25].state;%>\nActive: <%=data[25].active;%>\nConfirmed: <%=data[25].confirmed;%>\nDeaths: <%=data[25].deaths;%>\nRecovered: <%=data[25].recovered;%>\nLast Updated: <%=data[25].lastupdatedtime%>");
-});
-
-var Odisha = document.getElementById("Odisha");
-Odisha.addEventListener("click",function(){
-	alert("State: <%=data[26].state;%>\nActive: <%=data[26].active;%>\nConfirmed: <%=data[26].confirmed;%>\nDeaths: <%=data[26].deaths;%>\nRecovered: <%=data[26].recovered;%>\nLast Updated: <%=data[26].lastupdatedtime%>");
-});
-
-var Punjab = document.getElementById("Punjab");
-Punjab.addEventListener("click",function(){
-	alert("State: <%=data[28].state;%>\nActive: <%=data[28].active;%>\nConfirmed: <%=data[28].confirmed;%>\nDeaths: <%=data[28].deaths;%>\nRecovered: <%=data[28].recovered;%>\nLast Updated: <%=data[28].lastupdatedtime%>");
-});
-
-var Puducherry = document.getElementById("Puducherry");
-Puducherry.addEventListener("click",function(){
-	alert("State: <%=data[27].state;%>\nActive: <%=data[27].active;%>\nConfirmed: <%=data[27].confirmed;%>\nDeaths: <%=data[27].deaths;%>\nRecovered: <%=data[27].recovered;%>\nLast Updated: <%=data[27].lastupdatedtime%>");
-});
-
-var Rajasthan = document.getElementById("Rajasthan");
-Rajasthan.addEventListener("click",function(){
-	alert("State: <%=data[29].state;%>\nActive: <%=data[29].active;%>\nConfirmed: <%=data[29].confirmed;%>\nDeaths: <%=data[29].deaths;%>\nRecovered: <%=data[29].recovered;%>\nLast Updated: <%=data[29].lastupdatedtime%>");
-});
-var Sikkim = document.getElementById("Sikkim");
-Sikkim.addEventListener("click",function(){
-	alert("State: <%=data[30].state;%>\nActive: <%=data[30].active;%>\nConfirmed: <%=data[30].confirmed;%>\nDeaths: <%=data[30].deaths;%>\nRecovered: <%=data[30].recovered;%>\nLast Updated: <%=data[30].lastupdatedtime%>");
-});
-var Telangana = document.getElementById("Telangana");
-Telangana.addEventListener("click",function(){
-	alert("State: <%=data[32].state;%>\nActive: <%=data[32].active;%>\nConfirmed: <%=data[32].confirmed;%>\nDeaths: <%=data[32].deaths;%>\nRecovered: <%=data[32].recovered;%>\nLast Updated: <%=data[32].lastupdatedtime%>");
-});
-var TamilNadu = document.getElementById("Tamil Nadu");
-TamilNadu.addEventListener("click",function(){
-	alert("State: <%=data[31].state;%>\nActive: <%=data[31].active;%>\nConfirmed: <%=data[31].confirmed;%>\nDeaths: <%=data[31].deaths;%>\nRecovered: <%=data[31].recovered;%>\nLast Updated: <%=data[31].lastupdatedtime%>");
-});
-var Tripura = document.getElementById("Tripura");
-Tripura.addEventListener("click",function(){
-	alert("State: <%=data[34].state;%>\nActive: <%=data[34].active;%>\nConfirmed: <%=data[34].confirmed;%>\nDeaths: <%=data[34].deaths;%>\nRecovered: <%=data[34].recovered;%>\nLast Updated: <%=data[34].lastupdatedtime%>");
-});
-var UttarPradesh = document.getElementById("Uttar Pradesh");
-UttarPradesh.addEventListener("click",function(){
-	alert("State: <%=data[35].state;%>\nActive: <%=data[35].active;%>\nConfirmed: <%=data[35].confirmed;%>\nDeaths: <%=data[35].deaths;%>\nRecovered: <%=data[35].recovered;%>\nLast Updated: <%=data[35].lastupdatedtime%>");
-});
-var Uttarakhand = document.getElementById("Uttarakhand");
-Uttarakhand.addEventListener("click",function(){
-	alert("State: <%=data[36].state;%>\nActive: <%=data[36].active;%>\nConfirmed: <%=data[36].confirmed;%>\nDeaths: <%=data[36].deaths;%>\nRecovered: <%=data[36].recovered;%>\nLast Updated: <%=data[36].lastupdatedtime%>");
-});
-var WestBengal = document.getElementById("West Bengal");
-WestBengal.addEventListener("click",function(){
-	alert("State: <%=data[37].state;%>\nActive: <%=data[37].active;%>\nConfirmed: <%=data[37].confirmed;%>\nDeaths: <%=data[37].deaths;%>\nRecovered: <%=data[37].recovered;%>\nLast Updated: <%=data[37].lastupdatedtime%>");
-});
-var Andaman = document.getElementById("Andaman and Nicobar Islands");
-Andaman.addEventListener("click",function(){
-	alert("State: <%=data[0].state;%>\nActive: <%=data[0].active;%>\nConfirmed: <%=data[0].confirmed;%>\nDeaths: <%=data[0].deaths;%>\nRecovered: <%=data[0].recovered;%>\nLast Updated: <%=data[0].lastupdatedtime%>");
-});
+	});
+}
 </script>
 	
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

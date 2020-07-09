@@ -84,7 +84,7 @@ request("https://corona-api.com/countries",function(err,res,body){
 
 
 app.get("/",function(req,res){
-	res.render("home.ejs",{data:states,raw:raw,total:total});
+	res.render("home.ejs",{data:states,raw:raw});
 });
 
 app.get("/world",function(req,res){
