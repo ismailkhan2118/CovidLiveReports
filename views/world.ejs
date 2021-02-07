@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=0.5"> -->
   <script src="https://kit.fontawesome.com/ef963380d6.js" crossorigin="anonymous"></script>
 	<title></title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -428,7 +430,7 @@
   <path
 	 inkscape:connector-curvature="0"
      
-	 id="United Kingdom"
+	 id="UK"
 	 data-
 	 d="m 950,227.5 -4.9,-3.7 -3.9,0.3 0.8,3.2 -1.1,3.2 2.9,-0.1 3.5,1.3 2.7,-4.2 z m 13,-24.3 -5.5,0.5 -3.6,-0.4 -3.7,4.8 -1.9,6.1 2.2,3 0.1,5.8 2.6,-2.8 1.4,1.6 -1.7,2.7 1,1.6 5.7,1.1 0.1,0 3.1,3.8 -0.8,3.5 0,0 -7.1,-0.6 -1,4 2.6,3.3 -5.1,1.9 1.3,2.4 7.5,1 0,0 -4.3,1.3 -7.3,6.5 2.5,1.2 3.5,-2.3 4.5,0.7 3.3,-2.9 2.2,1.2 8.3,-1.7 6.5,0.1 4.3,-3.3 -1.9,-3.1 2.4,-1.8 0.5,-3.9 -5.8,-1.2 -1.3,-2.3 -2.9,-6.9 -3.2,-1 -4.1,-7.1 -0.4,-0.6 -4.8,-0.4 4.2,-5.3 1.3,-4.9 -5,0 -4.7,0.8 5,-6.4 z"
 	 style="fill:#f2f2f2;fill-rule:evenodd" />
@@ -1558,9 +1560,21 @@
 	 d="m 879.6,395.2 -0.2,-0.2 -0.7,0.5 -0.6,0 0.1,0.2 0.1,0.2 0.7,0.4 0.6,-1.1 z m 13.5,-2.1 0,-0.1 -0.1,0 -0.1,0.1 -1.3,-0.1 -0.2,0.6 -0.5,0.4 0,0.7 0.5,0.7 0.3,0.1 0.5,0.1 0.7,-0.4 0.2,-0.4 0.1,-0.8 -0.1,-0.4 0,-0.5 z m -9.7,0.8 0.5,-0.4 0,-0.2 -0.1,-0.3 -0.5,-0.3 -0.2,0 -0.2,0.2 -0.2,0.4 0.3,0.5 0.2,0.1 0.2,0 z m 4.7,-2.3 1.2,-1 0,-0.3 -1,0.1 -1.1,1 -0.3,0.1 -1,0.1 -0.5,0 -0.4,0.2 0.2,0.3 0.4,1 0.7,0.9 0.6,-0.2 0.3,-0.2 0.4,-0.6 0.5,-1.4 z m 11.6,1.3 1.5,-0.5 0.3,-1 0.3,-1.1 0,-0.7 -0.2,-0.3 -0.1,0 -0.4,0 -0.3,0.2 -0.1,0.6 -0.7,1.3 -0.5,1.2 -0.7,0.6 -0.7,0.2 0.1,0.1 0.7,0.1 0.8,-0.7 z m -19.7,-2 0.5,-0.5 0.1,-0.3 -0.1,-0.5 0.2,-0.2 -0.1,-0.4 -0.3,-0.4 -0.7,0 -0.4,0.6 0.6,1.2 0.1,0.5 0.1,0 z m 22.4,-2.7 0.9,-0.3 0.5,-0.3 0.1,-0.9 0.2,-0.3 -0.2,-0.3 -0.2,0.2 -0.2,0.4 -0.6,0.2 -0.8,0.4 -0.2,0.3 -0.2,0.9 0.4,0.1 0.3,-0.4 z"
 	 style="fill:#f2f2f2;fill-rule:evenodd" />
 </svg>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+	<!-- Modal content -->
+	<div class="modal-content">
+	  <span class="close">&times;</span>
+	  <p id="report">Some text in the Modal..</p>
+	</div>
+  
+  </div>
+
+
 <br>
 <h2><a type="button" class="btn btn-secondary" href="/">INDIA REPORT <i class="far fa-flag"></i></a></h2>
-
 <h2>Click on the Countries on the MAP for details.</h2>
 <h4>Note:Please zoom-in if using mobiles for better experience!</h4>
 
@@ -1578,10 +1592,10 @@
 <% for(var i=0;i<249;i++){ %>
 	
   <tr>
-    <td data-th="Country"><%=tab_data[i].name;%></td>
-    <td data-th="Confirmed"><%=tab_data[i].latest_data.confirmed;%></td>
-    <td data-th="Recovered"><%=tab_data[i].latest_data.recovered;%></td>
-    <td data-th="Deaths"><%=tab_data[i].latest_data.deaths;%></td>
+    <td data-th="Country"><%=data[i].name;%></td>
+    <td data-th="Confirmed"><%=data[i].latest_data.confirmed;%></td>
+    <td data-th="Recovered"><%=data[i].latest_data.recovered;%></td>
+    <td data-th="Deaths"><%=data[i].latest_data.deaths;%></td>
   </tr>
 	<% } %>
   
@@ -1593,14 +1607,21 @@
 	</h4>
 
 <script type="text/javascript">
-
-				
+var report = document.getElementById("report");
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];	
 var ejs_d = document.getElementById("EJSData");
 var d = ejs_d.getAttribute("value");
 var array = JSON.parse(d);
-var actual_array = array.data;
 
-
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 var s; 
 function getCountry(evt){
 	return evt.name === s;
@@ -1611,9 +1632,12 @@ for(var i=0;i<211;i++)
 {
 	countries[i].addEventListener("click",function(){
 		s = this.getAttribute("id");
-		var c =  actual_array.find(getCountry);
-		alert("Country: "+c.name+"\n"+"Confirmed: "+c.latest_data.confirmed+"\n"+"Deaths:  "+c.latest_data.deaths+"\n"+"Recovered: "+c.latest_data.recovered+"\nLast updated: "+c.updated_at);
-
+		var c =  array.find(getCountry);
+		if(c){
+		modal.style.display = "block";
+		report.innerHTML = `<h1> DATA </h1> Country : ${c.name} <br> Confirmed : ${c.latest_data.confirmed} <br> Deaths :  ${c.latest_data.deaths} <br> Recovered : ${c.latest_data.recovered} <br> Last updated : ${c.updated_at}`;
+		}
+		//alert("Country: "+c.name+"\n"+"Confirmed: "+c.latest_data.confirmed+"\n"+"Deaths:  "+c.latest_data.deaths+"\n"+"Recovered: "+c.latest_data.recovered+"\nLast updated: "+c.updated_at);
 	});
 }
 </script>
