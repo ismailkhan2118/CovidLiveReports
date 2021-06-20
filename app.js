@@ -14,9 +14,7 @@ request("https://api.covid19india.org/data.json",function(err,res,body){
 		{
 		var raw_data = JSON.parse(body);
 	    raw = raw_data.statewise;
-		raw.splice(31,1);
-		console.log(raw)
-		
+		raw.splice(31,1);		
 		}
 	else
 	{
