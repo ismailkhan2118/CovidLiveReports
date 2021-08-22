@@ -1,7 +1,10 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat:300,400,700";
 body {
+  /* background: #E0EAFC;  fallback for old browsers */
+  /* background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to right, #CFDEF3, #E0EAFC); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-color: #ffdead;
 }
-
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -24,7 +27,6 @@ body {
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
 }
-
 /* The Close Button */
 .close {
   color: #aaa;
@@ -39,35 +41,51 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+.ik {
+  color: black;
+  margin-right: 25px;
+}
 
-path:hover {
-  stroke-width: 5px;
-  stroke: rgba(0, 0, 0, 0.7);
-}
-hr.style1 {
-  border-top: 1px solid #8c8b8b;
-}
-path {
-  stroke-width: 2.5px;
+i {
+  color: #ff726f;
 }
 h1 {
   font-family: "Raleway", sans-serif;
+  color: #001f3f;
   text-align: center;
-  text-shadow: 1px 1px 2px black;
 }
+path {
+  stroke-width: 1.5px;
+  fill: white;
+  stroke: #e49b0f;
+}
+path:hover {
+  stroke-width: 2.5px;
+  stroke: rgba(0, 0, 0, 0.7);
+}
+h3 {
+  font-family: "Raleway", sans-serif;
+  color: #001f3f;
+  text-align: center;
+}
+
 h2 {
   font-family: "Raleway", sans-serif;
+  color: #001f3f;
   text-align: center;
 }
 h4 {
   font-family: "Raleway", sans-serif;
-  text-align: center;
+  color: #001f3f;
+  text-align: right;
 }
-i {
-  color: #b22222;
+
+hr.style1 {
+  border-top: 1px solid #8c8b8b;
 }
 
 .rwd-table {
+  align-self: center;
   margin: 1em 0;
   min-width: 300px;
 }
@@ -116,12 +134,6 @@ i {
   .rwd-table td:last-child {
     padding-right: 0;
   }
-}
-
-h1 {
-  font-weight: normal;
-  letter-spacing: -1px;
-  color: #34495e;
 }
 
 .rwd-table {
