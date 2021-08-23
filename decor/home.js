@@ -32,3 +32,5 @@ coll[0].addEventListener("click", function () {
     content.style.display = "block";
   }
 });
+const link = document.getElementById("link");
+link.addEventListener("click", () => {});

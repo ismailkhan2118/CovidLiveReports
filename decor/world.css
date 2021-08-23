@@ -1,5 +1,5 @@
 body {
-  background-color: #ffdead;
+  background-color: cyan;
 }
 
 /* The Modal (background) */
@@ -18,7 +18,7 @@ body {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background-color: burlywood;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
