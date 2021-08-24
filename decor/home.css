@@ -3,7 +3,27 @@ body {
   /* background: #E0EAFC;  fallback for old browsers */
   /* background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  Chrome 10-25, Safari 5.1-6 */
   /* background: linear-gradient(to right, #CFDEF3, #E0EAFC); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-color: cyan;
+  background-color: #f7e9ff;
+  height: 100vh;
+}
+.cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+svg {
+  height: 48em;
+  width: 40em;
+  transform: scale(1);
+}
+@media (max-width: 700px) {
+  body {
+    /* height: 48em;
+    width: 40em; */
+    transform: scale(0.7);
+    overflow-y: scroll;
+  }
 }
 /* The Modal (background) */
 .modal {
@@ -21,7 +41,7 @@ body {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: burlywood;
+  background-color: rgb(255, 255, 255);
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
@@ -41,13 +61,9 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-.ik {
-  color: black;
-  margin-right: 25px;
-}
 
-i {
-  color: #ff726f;
+.footer {
+  text-align: center;
 }
 h1 {
   font-family: "Raleway", sans-serif;
@@ -78,10 +94,6 @@ h4 {
   font-family: "Raleway", sans-serif;
   color: #001f3f;
   text-align: right;
-}
-
-hr.style1 {
-  border-top: 1px solid #8c8b8b;
 }
 
 .rwd-table {
@@ -159,22 +171,9 @@ hr.style1 {
 .rwd-table td:before {
   color: #dd5;
 }
-.collapsible {
-  text-align: center;
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  outline: none;
-  font-size: 15px;
-}
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
-.collapsible:hover {
-  background-color: #ccc;
+.collapsible {
+  margin: 1em;
 }
 
 /* Style the collapsible content. Note: hidden by default */

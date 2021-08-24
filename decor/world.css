@@ -1,5 +1,33 @@
 body {
-  background-color: cyan;
+  background-color: #f7e9ff;
+}
+
+.cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+svg {
+  stroke-linejoin: round;
+  stroke: #daa520;
+  height: 30em;
+  width: 100em;
+  fill: none;
+  margin-left: 30em;
+}
+@media (max-width: 900px) {
+  svg {
+    height: 20em;
+    margin-left: 14em;
+  }
+}
+
+@media (max-width: 700px) {
+  svg {
+    height: 15em;
+    margin-left: 12em;
+  }
 }
 
 /* The Modal (background) */
@@ -18,7 +46,7 @@ body {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: burlywood;
+  background-color: rgb(255, 255, 255);
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
@@ -44,9 +72,6 @@ path:hover {
   stroke-width: 5px;
   stroke: rgba(0, 0, 0, 0.7);
 }
-hr.style1 {
-  border-top: 1px solid #8c8b8b;
-}
 path {
   stroke-width: 2.5px;
 }
@@ -63,8 +88,9 @@ h4 {
   font-family: "Raleway", sans-serif;
   text-align: center;
 }
-i {
-  color: #b22222;
+
+.footer {
+  text-align: center;
 }
 
 .rwd-table {
@@ -148,15 +174,7 @@ h1 {
   color: #dd5;
 }
 .collapsible {
-  text-align: center;
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  outline: none;
-  font-size: 15px;
+  margin: 1em;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */

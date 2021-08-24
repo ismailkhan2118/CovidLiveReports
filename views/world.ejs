@@ -10,8 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
+	<div  id="info" data-info="<%= JSON.stringify(data) %>"></div>
+
+	<div class="cont">
   <h1><i class="fas fa-virus"></i> Covid-19 Live Global Report</h1>
-  <div  id="info" data-info="<%= JSON.stringify(data) %>"></div>
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -21,9 +23,7 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    enable_background="new 0 0 2000 1001"
-   height="650px"
    pretty_print="False"
-   style="stroke-linejoin: round; stroke: #DAA520; fill: none;"
    version="1.1"
    viewBox="0 0 3000 1001"
    w000px"
@@ -1578,10 +1578,7 @@
 <h2>Click on the Countries on the MAP for details.</h2>
 <h4>Note:Please zoom-in if using mobiles for better experience!</h4>
 
-<br>
-<hr class="style1">
-<br>
-<button type="button" class="collapsible">Click to view tabular data </button>
+<button type="button" class="collapsible btn btn-secondary">View Tabular Data </button>
 <div class="content">
 <h1>Country-wise Tabular Data</h1>
 
@@ -1605,11 +1602,10 @@
 </table>
 </div>
 				
-	<h4>
-	<i class="fas fa-address-card ik"></i><b>-Syed Munawar Rizwan    <a href="https://www.linkedin.com/in/syed-munawar-rizwan-2a867b180/">click here to visit my profile</a></b><br><i class="fas fa-envelope ik"></i><b>-syedmunawarrizwan17@gmail.com</b><br><i class="fas fa-graduation-cap ik"></i><b>-LIET</b>
-	</h4>
-  
-
+<div class="footer">
+	<i class="fas fa-address-card ik"></i><b>-Ismail Khan<br></b><i class="fas fa-graduation-cap ik"></i><b>-MJCET<a href="https://www.linkedin.com/in/ismail-khan-33916b184/"><br><i class="fab fa-linkedin fa-2x"></i></a></b>
+</div>
+</div>
 				
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
